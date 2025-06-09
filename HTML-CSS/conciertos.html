@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../Imagenes/metalogo.png">
+  <link rel="apple-touch-icon" href="../Imagenes/metalogo.png">
+  <title>FEXCO</title>
+  <link rel="stylesheet" href="conciertos.css"/>
+</head>
+<body class="body">
+
+  <header class="header">
+    <a href="../index.html" class="header__logo-link">
+      <img src="../Imagenes/logoblanco.png" alt="Logo FEXCO" class="header__logo"/>
+    </a>
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li class="nav__item">
+          <a href="./queeslafexco.html" class="nav__link nav__link--bg1">¿Qué es la Fexco?</a>
+        </li>
+        <li class="nav__item">
+          <a href="./exposicion.html" class="nav__link nav__link--bg2">Pabellones y Expositores</a>
+        </li>
+        <li class="nav__item">
+          <a href="./eventos.html" class="nav__link nav__link--bg3">Eventos Paralelos</a>
+        </li>
+        <li class="nav__item">
+          <a href="./contactos.html" class="nav__link nav__link--bg4">Ubicación</a>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link nav__link--bg5"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="toggle" class="toggle-checkbox" />
+  <label for="toggle" class="hamburguesa">
+    <img src="../Imagenes/menúcelchiquito.png" alt="Menú" class="hamburguesa-icono" />
+  </label>
+
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="../HTML-CSS/queeslafexco.html" class="nav__link nav__link--bg1">¿Qué es la Fexco?</a></li>
+      <li><a href="./exposicion.html" class="nav__link nav__link--bg2">Pabellones y Expositores</a></li>
+      <li><a href="../HTML-CSS/conciertos.html" class="nav__link nav__link--bg3">Conciertos</a></li>
+      <li><a href="../HTML-CSS/eventos.html" class="nav__link nav__link--bg4">Eventos Paralelos</a></li>
+      <li><a href="../HTML-CSS/contactos.html" class="nav__link nav__link--bg6">Ubicación</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <main class="main">
+    <section class="artists">
+      <h2 class="artists__title">ARTISTAS 2026</h2>
+      <P class="artists__parrafo">Esta feria también cuenta con artistas internacionales de distintos géneros musicales, los cuales se presentan cada fin de semana y siendo una presentación muy económica para sus fans.</P>
+      <div class="artists__grid">
+        <div class="artist-card">
+          <img src="../Imagenes/miranda.jpg" alt="Miranda" class="artist-card__image">
+          <h3 class="artist-card__name">MIRANDA</h3>
+          <a href="#miranda-info" class="artist-card__button">VER MÁS</a>
+        </div>
+        <div class="artist-card">
+          <img src="../Imagenes/ivancornejo.jpg" alt="Ivan Cornejo" class="artist-card__image">
+          <h3 class="artist-card__name">IVAN CORNEJO</h3>
+          <a href="#ivan-info" class="artist-card__button">VER MÁS</a>
+        </div>
+        <div class="artist-card">
+          <img src="../Imagenes/latinmafia.jpg" alt="Latín Mafia" class="artist-card__image">
+          <h3 class="artist-card__name">LATÍN MAFÍA</h3>
+          <a href="#latin-info" class="artist-card__button">VER MÁS</a>
+        </div>
+        <div class="artist-card">
+          <img src="../Imagenes/themariass.jpg" alt="The Marías" class="artist-card__image">
+          <h3 class="artist-card__name">THE MARIAS</h3>
+          <a href="#marias-info" class="artist-card__button">VER MÁS</a>
+        </div>
+        <div class="artist-card">
+          <img src="../Imagenes/3am.jpg" alt="3 AM" class="artist-card__image">
+          <h3 class="artist-card__name">3 AM</h3>
+          <a href="#3am-info" class="artist-card__button">VER MÁS</a>
+        </div>
+        <div class="artist-card">
+          <img src="../Imagenes/rauwalejandro.jpg" alt="Rauw Alejandro" class="artist-card__image">
+          <h3 class="artist-card__name">RAUW ALEJANDRO</h3>
+          <a href="#rauw-info" class="artist-card__button">VER MÁS</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="artists__title2">INFORMACIÓN DE ARTISTAS</h2>
+
+    <section class="artist-info" id="miranda-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/Miranda_ - Tu misterioso alguien (En Vivo Teatro Opera 2015)(720P_HD)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">MIRANDA</h3>
+        <p class="artist-info__text">Miranda! es un dúo argentino de pop electrónico formado en 2001, reconocido por su estilo colorido, teatral y lleno de energía. Con hits como Don y Perfecta, han conquistado escenarios de toda Latinoamérica con su propuesta fresca y divertida.</p>
+          <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-joel" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="artistas" class="metodo-radio" id="metodo-tarjeta-joel" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-artistas" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+    </section>
+  
+    <section class="artist-info" id="ivan-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/Ivan Cornejo - Aquí Te Espero - Live at Coachella 2025(720P_HD)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">IVAN CORNEJO</h3>
+        <p class="artist-info__text">Iván Cornejo es una joven promesa del regional mexicano. Con letras melancólicas y un estilo íntimo, ha conectado con millones de fans a través de sus canciones cargadas de emoción, como Está Dañada y Aquí Te Espero.</p>
+        <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-artistas" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-tarjeta-artistas" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-artistas" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+  
+    <section class="artist-info" id="latin-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/LATIN MAFIA EN COCA COLA FLOW (última parte)(720P_60FPS)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">LATÍN MAFIA</h3>
+        <p class="artist-info__text">Latín Mafia es un grupo emergente de hermanos mexicanos que fusiona ritmos urbanos con sonidos alternativos. Su propuesta fresca, emocional y relajada ha conquistado plataformas digitales con temas como Julieta y Patadas de Ahogado.</p>
+        <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-artistas" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-tarjeta-artistas" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-joel" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+  
+    <section class="artist-info" id="marias-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/The Marías - No One Noticed (Live at Camp Flog Gnaw Music Festival 2024)(720P_HD)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">THE MARÍAS</h3>
+        <p class="artist-info__text">The Marías es una banda indie pop con base en Los Ángeles, liderada por María Zardoya. Con una estética vintage, sonidos psicodélicos y letras sensuales, han creado un universo sonoro único con canciones como Cariño y Hush.</p>
+        <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-artistas" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-tarjeta-joel" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-joel" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+  
+    <section class="artist-info" id="3am-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/3AM en Buenos Aires(720P_HD)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">3 AM</h3>
+        <p class="artist-info__text">3AM es un dúo colombiano de pop urbano que combina letras románticas con ritmos suaves y pegajosos. Su estilo íntimo y emocional los ha posicionado como favoritos entre el público joven que busca canciones que hablen del amor real.</p>
+        <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-artistas" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-tarjeta-artistas" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-joel" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+  
+    <section class="artist-info" id="rauw-info">
+      <div class="artist-info__video">
+        <video controls class="artist-info__video-player">
+          <source src="../Videos/Rauw Alejandro - Tú con Él (Live from New York City)(720P_HD)_001.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="artist-info__content">
+        <h3 class="artist-info__title">RAUW ALEJANDRO</h3>
+        <p class="artist-info__text">Rauw Alejandro es uno de los grandes exponentes del reguetón y el pop latino actual. Con una mezcla explosiva de baile, sensualidad y futurismo, ha revolucionado la escena con hits como Todo de Ti, Desenfocao y Bzrp Session.</p>
+        <input type="checkbox" id="popup-toggle-artistas" class="popup-toggle" hidden>
+  <label for="popup-toggle-artistas" class="artist-info__buy-button">COMPRAR ENTRADA</label>
+
+  <div class="popup-container">
+  <div class="overlay">
+
+  <div class="popover">
+    <div class="popover-content">
+      <label for="popup-toggle-artistas" class="popover-close">&times;</label>
+      <h3>A DISFRUTAR!</h3>
+
+
+      <label for="artista-artistas">Selecciona el artista:</label>
+      <select id="artista-artistas">
+        <option>Miranda</option>
+        <option>Ivan Cornejo</option>
+        <option>Latín Mafía</option>
+        <option>The Marías</option>
+        <option>3 am</option>
+        <option>Rauw Alejandro</option>
+      </select>
+
+      <div class="metodo-pago">
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-qr-artistas" hidden>
+          <span class="metodo-label">QR</span>
+        </label>
+        <label>
+          <input type="radio" name="metodo-artistas" class="metodo-radio" id="metodo-tarjeta-artistas" hidden>
+          <span class="metodo-label">Tarjeta</span>
+        </label>
+      </div>
+
+      <div class="qr-section">
+        <label for="metodo-qr-artistas">
+          <img src="../Imagenes/qr.png" alt="Código QR" class="qr-image">
+        </label>
+      </div>
+
+      <input type="checkbox" id="confirm-artistas" class="confirm" hidden>
+      <label for="confirm-artistas" class="confirm-button">LISTO</label>
+
+      <div class="success-message">
+        COMPRA EXITOSA guardada en tu historial.
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="footer__contenedor">
+    <div class="footer__columna">
+      <h3>MISIÓN</h3>
+      <p>
+        Promover, facilitar y diversificar el intercambio comercial de bienes y servicios,
+        fomentando el conocimiento y la discusión para construir una visión de desarrollo
+        que contribuya al progreso económico y social de la región.
+      </p>
+    </div>
+    <div class="footer__columna">
+      <h3>VISIÓN</h3>
+      <p>
+        Ser una herramienta de desarrollo que fortalezca el tejido productivo,
+        genere empleos y proyecte a Cochabamba como referente empresarial regional,
+        impulsando la competitividad y expansión de mercados.
+      </p>
+    </div>
+    <div class="footer__columna">
+      <h3>REDES SOCIALES</h3>
+      <ul class="footer__redes">
+        <li>
+          <a href="https://www.facebook.com/fexcobo" class="footer__item" target="_blank">
+          <img src="../Imagenes/facebook.png" alt="FEXCO">FEXCO</a></li>
+        <li>
+          <a href="https://x.com/FEXCO_BO" class="footer__item" target="_blank">
+          <img src="../Imagenes/x.png" alt="@FEXCO_BO">@FEXCO_BO</a></li>
+        <li>
+          <a href="https://www.tiktok.com/@fexcobolivia?lang=es" class="footer__item" target="_blank">
+          <img src="../Imagenes/tikokt.png" alt="@fexco_bolivia">fexco_bolivia</a></li>
+        <li>
+          <img src="../Imagenes/gmail.png" alt="Gmail"> info@fexco.com.bo</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>

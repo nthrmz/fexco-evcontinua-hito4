@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body.body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #2d1344;
+    line-height: 1.6;
+}
+  
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #2a1f4e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+  
+.header__logo{
+    height: 60px;
+}
+  
+.header__logo-link{
+    text-decoration: none;
+}
+
+.header__logo:hover{
+    transform: scale(1.05);
+}
+
+.nav__lista{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+  
+.nav__link {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s;
+}
+  
+.nav__link:hover{
+    transform: scale(1.05);
+  }
+  
+.nav__link--bg1{
+    background-image: url(../Imagenes/index1.jpg);
+  }
+  
+.nav__link--bg2{
+    background-image: url(../Imagenes/index2.jpg);
+}
+  
+.nav__link--bg3{
+    background-image: url(../Imagenes/index5.jpg);
+}
+
+.nav__link--bg4{
+    background-image: url(../Imagenes/index4.jpg);
+}
+
+.nav__link--bg5{
+    background-image: url(../Imagenes/user.png);
+}
+
+.nav__link--bg6{
+    background-image: url(../Imagenes/index4.jpg);
+}
+  
+.main{
+    padding: 20px;
+    margin-top: 90px;
+}
+  
+.mapa{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+  
+.mapa__img{
+    max-width: 70%;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.mapa__descripcion{
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-inline: auto;
+    font-size: 18px;
+    color: #2a1f4e;
+}
+  
+.empresas{
+    text-align: center;
+}
+  
+.empresas__titulo{
+    font-size: 3.5rem;
+    color:#2a1f4e;
+    margin-bottom: 2rem;
+}
+  
+.empresas__lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+}
+  
+.empresa{
+    text-align: center;
+    width: 18rem;
+}
+  
+.empresa__imagen{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.empresa__nombre{
+    font-size: 30px;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color:#c52172;
+}
+
+.feria{
+    text-align: center;
+    padding: 2rem;
+}
+  
+.feria__titulo{
+    color:#2a1f4e;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    gap: 8rem;
+}
+  
+.alquileres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+  
+.feria__card {
+    background-color: transparent;
+    max-width: 250px;
+}
+  
+.feria__imagen-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feria__imagen {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.feria__descripcion{
+    color: #2a1f4e;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    gap: 8rem;
+}
+  
+.feria__boton {
+    background-color: #c52173d0;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 5rem;
+}
+  
+.feria__boton:hover{
+    background-color: #c52172;
+}
+
+.feria__popup-toggle {
+  display: none;
+}
+
+.feria__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 31, 78, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.feria__popup-toggle:checked ~ .feria__popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.feria__popup-contenido {
+  background-color:#c52172;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  color: #2a1f4e;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.feria__popup-contenido h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feria__formulario input,
+.feria__formulario textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.feria__formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.feria__formulario button {
+  background-color:#2a1f4e;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.feria__formulario button:hover {
+  background-color: #a91b5d;
+}
+
+.feria__popup-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.feria__popup-cerrar:hover {
+  color:#2a1f4e;
+}
+
+.footer {
+  background-color: #2a1f4e;
+  color: white;
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__columna {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__columna h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer__columna p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.footer__redes {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__redes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+.footer__redes img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer__item {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer__item:hover {
+  color: #c52172;
+  text-decoration: none;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.hamburguesa {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.hamburguesa-icono {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background-color:#2a1f4e;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.toggle-checkbox:checked + .hamburguesa + .nav-mobile {
+  display: flex;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile li {
+  margin: 10px 0;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .toggle-checkbox:checked + .hamburguesa + .nav-mobile {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+}

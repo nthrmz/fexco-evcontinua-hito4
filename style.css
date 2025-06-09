@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: sans-serif;
+}
+  
+.portada {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+}
+  
+.caja{
+    flex: 1;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.5s ease, filter 0.3s ease;
+    overflow: hidden;
+}
+  
+.caja:hover {
+    flex: 2;
+    filter: brightness(0.9);
+}
+  
+.caja0{
+    flex: 2;
+    background-image: url(./Imagenes/index1.0.jpg);
+}
+  
+.caja1{
+    background-image: url(./Imagenes/index3.jpg);
+}
+  
+.caja2{
+    background-image: url(./Imagenes/index2.jpg);
+}
+  
+.caja3{
+    background-image: url(./Imagenes/index5.jpg);
+}
+
+.caja4{
+    background-image: url(./Imagenes/index4.jpg);
+}
+  
+.botonrosa{
+    width: 100%;
+    background-color: #c52172;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.botonazul{
+    width: 100%;
+    background-color: #2a1f4e;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+  
+.caja:hover .botonazul{
+    background-color: #c52172;
+}  
+
+.caja:hover .botonrosa{
+    background-color: #2a1f4e;
+} 
+
+@media (max-width: 576px) {
+  .portada {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .caja {
+    height: 200px;
+    flex: none;
+  }
+
+  .caja0 {
+    height: 300px;
+  }
+
+  .botonrosa,
+  .botonazul {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .caja:hover {
+    flex: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .portada {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .caja {
+    height: 250px;
+    flex: none;
+  }
+
+  .caja0 {
+    height: 350px;
+  }
+
+  .botonrosa,
+  .botonazul {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .caja:hover {
+    flex: none;
+  }
+}

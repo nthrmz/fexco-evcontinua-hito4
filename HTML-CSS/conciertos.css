@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body.body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #2d1344;
+    line-height: 1.6;
+}
+  
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #c52172;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+  
+.header__logo{
+    height: 60px;
+}
+  
+.header__logo-link{
+    text-decoration: none;
+}
+
+.header__logo:hover{
+    transform: scale(1.05);
+}
+
+.nav__lista{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+  
+.nav__link {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s;
+}
+  
+.nav__link:hover{
+    transform: scale(1.05);
+  }
+  
+.nav__link--bg1{
+    background-image: url(../Imagenes/index1.jpg);
+  }
+  
+.nav__link--bg2{
+    background-image: url(../Imagenes/index3.jpg);
+}
+  
+.nav__link--bg3{
+    background-image: url(../Imagenes/index5.jpg);
+}
+
+.nav__link--bg4{
+    background-image: url(../Imagenes/index4.jpg);
+}
+
+.nav__link--bg5{
+    background-image: url(../Imagenes/user.png);
+}
+
+.nav__link--bg6{
+    background-image: url(../Imagenes/index4.jpg);
+}
+  
+.main{
+    padding: 20px;
+    margin-top: 90px;
+}
+
+.artists{
+    text-align: center;
+}
+  
+.artists__title{
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color:#c52172;
+}
+
+.artists__title2{
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color:#c52172;
+    text-align: center;
+}
+
+.artists__parrafo{
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-inline: auto;
+    font-size: 18px;
+    color:#2e2052;
+
+}
+
+.artists__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+  
+.artist-card{
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+}
+  
+.artist-card__image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+  
+.artist-card__image:hover{
+    transform: scale(1.05);
+}
+  
+.artist-card__name{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+  
+.artist-card__button{
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background-color:#c52173bd;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+  
+.artist-card__button:hover{
+    background-color:#2e2052;
+}
+  
+.artist-info{
+    display: flex;
+    flex-wrap: nowwrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fbe4ff;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #d3c2e0;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.artist-info__video{
+    flex: 0 0 40%;
+}
+  
+.artist-info__video-player{
+    width: 100%;
+    height: auto;
+    max-width: 950px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+  
+.artist-info__content{
+    flex: 1;
+    max-width: 60%;
+}
+  
+.artist-info__title{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    color:#c52172;
+}
+  
+.artist-info__text{
+    font-size: 1.5rem;
+    margin-bottom: 1rems;
+}
+   
+.artist-info__content,
+.artist-info__video{
+    flex: 1 1 100%;
+}
+
+.footer {
+  background-color: #c52172;
+  color: white;
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__columna {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__columna h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer__columna p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.footer__redes {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__redes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+.footer__redes img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer__item {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer__item:hover {
+  color: #2a1f4e;
+  text-decoration: none;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.hamburguesa {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.hamburguesa-icono {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background-color:#c52172;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.toggle-checkbox:checked + .hamburguesa + .nav-mobile {
+  display: flex;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile li {
+  margin: 10px 0;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.artist-info__buy-button{
+    background-color:#c52172;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 3rem;
+}
+  
+.artist-info__buy-button:hover{
+    background-color:#2e2052;
+}
+
+.popover {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:#2e2052;
+  border: 3px solid #2e2052;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.popup-toggle:checked + label + .popover {
+  display: block;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.popover-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #c52172;
+  font-weight: bold;
+}
+
+.select{
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #2e205279;
+}
+
+.confirm-button {
+  background-color: #c52172;
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  color: rgb(15, 211, 15);
+  font-weight: bold;
+}
+
+.confirm:checked + .confirm-button + .success-message {
+  display: block;
+}
+
+.metodo-pago {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.metodo-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #c52172;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.metodo-radio:checked + .metodo-label {
+  background-color: #c52172;
+  color: white;
+}
+
+.qr-section {
+  display: none;
+  text-align: center;
+}
+
+#metodo-qr-joel:checked ~ .qr-section {
+  display: block;
+}
+
+.qr-image {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.popup-container .overlay,
+.popup-container .popover {
+  display: none;
+}
+
+.popup-toggle:checked ~ .popup-container .overlay,
+.popup-toggle:checked ~ .popup-container .popover {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(197, 33, 114, 0.5);
+  z-index: 900;
+}
+
+
+.popover {
+    color:#fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#2e2052;
+  padding: 2rem;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .toggle-checkbox:checked + .hamburguesa + .nav-mobile {
+    display: flex;
+  }
+
+  .artists__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .artist-info__video,
+  .artist-info__content {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .artist-info__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .artist-info__text {
+    font-size: 1.2rem;
+  }
+
+  .artist-info__video-player {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .artist-info__buy-button {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+}

@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body.body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #2d1344;
+    line-height: 1.6;
+}
+  
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color:#c52172;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+  
+.header__logo{
+    height: 60px;
+}
+  
+.header__logo-link{
+    text-decoration: none;
+}
+
+.header__logo:hover{
+    transform: scale(1.05);
+}
+
+.nav__lista{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+  
+.nav__link {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s;
+}
+  
+.nav__link:hover{
+    transform: scale(1.05);
+  }
+  
+.nav__link--bg1{
+    background-image: url(../Imagenes/index1.jpg);
+  }
+  
+.nav__link--bg2{
+    background-image: url(../Imagenes/index3.jpg);
+}
+  
+.nav__link--bg3{
+    background-image: url(../Imagenes/index2.jpg);
+}
+
+.nav__link--bg4{
+    background-image: url(../Imagenes/index5.jpg);
+}
+
+.nav__link--bg5{
+    background-image: url(../Imagenes/user.png);
+}
+
+.nav__link--bg6{
+    background-image: url(../Imagenes/index4.jpg);
+}
+  
+.main{
+    padding: 20px;
+    margin-top: 90px;
+}
+
+.contacto-main{
+    padding: 80px 20px 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+  
+.contactos h2,
+.ubicacion h2{
+    color:#c52172;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+  
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+    font-size: 2rem;
+    color:#c52172;
+}
+
+.contacto img{
+  display: flex;
+    width: 30px;
+    height: 30px;
+}
+  
+.ubicacion p{
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    color:#c52172;
+}
+  
+.mapa{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+  
+.mapa a{
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.mapa a:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mapa img{
+    max-width: 100%;
+    width: 1000px;
+    height: 500px;
+    display: block;
+}
+
+.footer {
+  background-color:#c52172;
+  color: white;
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__columna {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__columna h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer__columna p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.footer__redes {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__redes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+.footer__redes img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer__item {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer__item:hover {
+  color: #c52172;
+  text-decoration: none;
+}
+
+.nav-mobile, .hamburguesa {
+  display: none;
+}
+
+.nav-desktop {
+  display: flex;
+}
+
+.hamburguesa {
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburguesa-icono {
+  width: 40px;
+  height: 40px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .nav-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color:#c52172;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  z-index: 9999;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-mobile ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-mobile li {
+    margin: 10px 0;
+  }
+
+  .nav-mobile a {
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contacto-main {
+    padding: 80px 20px 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+}
